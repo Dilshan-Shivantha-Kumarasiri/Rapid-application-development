@@ -105,3 +105,5 @@ class person{
 
 let person1 = new person('dislhan',25,26656);
 console.log(person1)
+
+person1.nic = 25664;

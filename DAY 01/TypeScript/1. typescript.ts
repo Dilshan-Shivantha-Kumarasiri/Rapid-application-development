@@ -111,7 +111,31 @@ class person{
     }
 }
 let person1 = new person('dislhan',25,26656);
+console.log(person1);
+person1.nic = 2546546;
+console.log(person1);
+
+
+// -------------------------------readonly--------------------------------------
+
+class persons{
+
+    name:string;
+    age:number;
+    readonly nic:number
+
+
+    constructor(name: string, age: number, nic: number) {
+        this.name = name;
+        this.age = age;
+        this.nic = nic;
+    }
+}
+let persons1 = new persons('dislhan',25,26656);
 console.log(person1)
+//persons1.nic = 2546546;// can not update value because this is read only
+console.log(persons1);
+
 
 
 
