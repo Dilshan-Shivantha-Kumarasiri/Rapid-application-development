@@ -35,3 +35,24 @@ function findTheSum(sum1:string | number,sum2:string | number) :number {
 }
 
 console.log(findTheSum('5',10))
+
+function findTheSum2(sum1:string | number,sum2:string | number) :number | string {
+    if (typeof sum1 === 'string' || typeof sum2 === 'string'){ // type guard
+        return +sum1+ +sum2;
+    }
+    return sum1+sum2; // looking for this
+}
+
+console.log(findTheSum2('5',10));
+
+// objects
+
+let student:{
+    id:number,
+    name:string,
+    age:number,
+    college:string,
+};
+
+student = {id:1, name:"dilshan", age:5, college:'uoBolton'}
+// student = {id:1, name:"dilshan", age:5, college:'uoBolton',classs:'se'} // error
