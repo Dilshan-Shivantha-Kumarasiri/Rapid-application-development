@@ -1,14 +1,14 @@
 //objects
+//
+// let student:{
+//     id:number,
+//     name:string,
+//     age:number,
+//     college:string,
+// };
 
-let student:{
-    id:number,
-    name:string,
-    age:number,
-    college:string,
-};
-
-student = {id:1, name:"dilshan", age:5, college:'uoBolton'}
-// student = {id:1, name:"dilshan", age:5, college:'uoBolton',classs:'se'} // error
+// student = {id:1, name:"dilshan", age:5, college:'uoBolton'}
+// // student = {id:1, name:"dilshan", age:5, college:'uoBolton',classs:'se'} // error
 
 // ---------------------------------------distance calculator
 
@@ -46,3 +46,31 @@ let location_2 = { lon: 133.7751, lat: 25.2744 }; // ausi
 
 let distance = calcDistance(location_1, location_2);
 console.log(`Distance: ${distance.toFixed(2)} KM`);
+
+
+// get location one value
+
+
+// get location two value
+
+// arrays
+
+let ar:number[] = [1,2.3];
+let str : string[] = ['dilshan','shivantha'];
+let strInt :(string | number)[]  = [123 , 'dilshan'];
+
+let student1 = {id:1,name:'dilshan',age:20,faculty:'cse'}
+let student2 = {id:2,name:'amila',age:21,faculty:'Tonic'}
+
+let student3 = {id:2,name:'amila',age:21,faculty:'Tonic',uni:'moratuwa'}
+
+let student:{id:number,name:string,age:number,faculty:string,uni?:string}[] = [];
+student.push(student1);
+student.push(student2);
+student.push(student3);
+
+
+type graduate = {id:number,name:string,age:number,faculty:string,uni?:string};
+
+let teacher:graduate[] = [];
+teacher.push(student1);
