@@ -139,6 +139,9 @@ let persons1 = new persons('dislhan',25,26656);
 console.log(person1)
 //persons1.nic = 2546546;// can not update value because this is read only
 console.log(persons1);
+
+// -------------------------------private--------------------------------------
+
 //console.log(persons1.age) // can not access because properties are private (need to implement method)
 console.log(persons1.getAge())
 
