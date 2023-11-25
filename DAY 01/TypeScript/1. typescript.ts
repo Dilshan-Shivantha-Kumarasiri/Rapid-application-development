@@ -169,6 +169,10 @@ class DbConnection{
 let connection = DbConnection.getConnection();
 console.log(connection);
 
+// -------------------------------Tuples--------------------------------------
+
+let tupel:[string,number,number,string,boolean] =  ['dilshan',25,25,'shivantha',true] // cannot change order and value count
+
 
 
 
