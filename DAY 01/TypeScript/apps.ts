@@ -74,3 +74,14 @@ type graduate = {id:number,name:string,age:number,faculty:string,uni?:string};
 
 let teacher:graduate[] = [];
 teacher.push(student1);
+
+interface graduate2 {
+    id:number,
+    name:string,
+    age:number,
+    faculty:string,
+    uni?:string
+}
+
+let customers:graduate2[] = [];
+customers.push(student2);
