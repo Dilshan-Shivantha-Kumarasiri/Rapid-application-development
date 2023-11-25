@@ -85,3 +85,23 @@ interface graduate2 {
 
 let customers:graduate2[] = [];
 customers.push(student2);
+
+
+//classes
+
+class person{
+
+    name:string;
+    age:number;
+    nic:number
+
+
+    constructor(name: string, age: number, nic: number) {
+        this.name = name;
+        this.age = age;
+        this.nic = nic;
+    }
+}
+
+let person1 = new person('dislhan',25,26656);
+console.log(person1)
