@@ -1,6 +1,8 @@
 // function
-function findSum(num1, num2) {
-    return num1 + num2; // need to return the number if not show some error in source code in type script
+function findTheSum(sum1, sum2) {
+    if (typeof sum1 === 'string' || typeof sum2 === 'string') { // type guard
+        return +sum1 + +sum2;
+    }
+    return sum1 + sum2;
 }
-var result = findSum(10, 20);
-console.log("function type return value = " + result);
+console.log(findTheSum('5', 10));

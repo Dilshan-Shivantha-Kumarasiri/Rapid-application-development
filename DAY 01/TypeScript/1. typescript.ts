@@ -24,3 +24,14 @@ function findSum(num1:number,num2:number):number {
 
 let result = findSum(10,20);
 console.log("function type return value = "+result);
+
+
+// type guard
+function findTheSum(sum1:string | number,sum2:string | number) :number {
+    if (typeof sum1 === 'string' || typeof sum2 === 'string'){ // type guard
+        return +sum1+ +sum2;
+    }
+    return sum1+sum2;
+}
+
+console.log(findTheSum('5',10))
