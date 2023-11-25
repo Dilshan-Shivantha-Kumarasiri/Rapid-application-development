@@ -147,6 +147,30 @@ console.log(persons1.getAge())
 
 
 
+// -------------------------------singleton pattern--------------------------------------
+
+
+class DbConnection{
+    static connection:string
+
+
+    private constructor(connection: string) {
+        DbConnection.connection = connection;
+    }
+
+    static getConnection(){
+        if (!this.connection){
+            return new DbConnection('test-connection');
+        }
+        return DbConnection.connection;
+    }
+}
+
+let connection = DbConnection.getConnection();
+console.log(connection);
+
+
+
 
 
 
