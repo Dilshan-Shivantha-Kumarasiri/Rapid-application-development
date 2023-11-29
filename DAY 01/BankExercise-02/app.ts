@@ -9,8 +9,16 @@ addFixedBtn.addEventListener('click',function () {
 
     let ownerName = name_input_element.value;
     let fixedAmount = fixedAmountElement.value;
-    // console.log(ownerName);
-    // console.log(fixedAmount);
-    console.log(`owner : ${ownerName} and fixed value is ${fixedAmount}`)
+    console.log(`owner : ${ownerName} and fixed value is ${fixedAmount}`);
+
+    let tableRow = `<tr><td>${ownerName}</td><td>${fixedAmount}</td></tr>`
+
+
+    let tableContent = document.getElementById("fixedDepositTableBody");
+    let htmlTableRowElement = tableContent.appendChild(document.createElement("tr"));
+    htmlTableRowElement.innerHTML = tableRow;
+
+
+
 
 });
