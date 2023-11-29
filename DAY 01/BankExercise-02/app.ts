@@ -31,7 +31,11 @@ addFixedBtn.addEventListener('click',function () {
 
 document.getElementById('updateInterestBtn').addEventListener("click",function () {
 
+    //add table to the interest rate
+    let childElementCount = tableContent.childElementCount;
+    for (let i = 0; i<childElementCount; i++){
+        tableContent.children.item(i).children.item(2).innerHTML = interest_value.value;
+    }
 
-    let childRow = tableContent.children.item(0).children.item(2).innerHTML = interest_value.value;
 
 })

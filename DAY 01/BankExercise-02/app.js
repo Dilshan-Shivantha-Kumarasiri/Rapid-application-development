@@ -20,5 +20,9 @@ addFixedBtn.addEventListener('click', function () {
     // htmlTableCellElement.innerText = "5"
 });
 document.getElementById('updateInterestBtn').addEventListener("click", function () {
-    var childRow = tableContent.children.item(0).children.item(2).innerHTML = interest_value.value;
+    //add table to the interest rate
+    var childElementCount = tableContent.childElementCount;
+    for (var i = 0; i < childElementCount; i++) {
+        tableContent.children.item(i).children.item(2).innerHTML = interest_value.value;
+    }
 });
