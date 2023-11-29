@@ -11,7 +11,7 @@ addFixedBtn.addEventListener('click',function () {
     let fixedAmount = fixedAmountElement.value;
     console.log(`owner : ${ownerName} and fixed value is ${fixedAmount}`);
 
-    let tableRow = `<tr><td>${ownerName}</td><td>${fixedAmount}</td><td>0<td><td>0<td></tr>`
+    let tableRow = `<tr><td>${ownerName}</td><td>${fixedAmount}</td><td>0</td><td>0</td></tr>`
 
     let htmlTableRowElement = tableContent.appendChild(document.createElement("tr"));
     htmlTableRowElement.innerHTML = tableRow;
@@ -23,9 +23,6 @@ addFixedBtn.addEventListener('click',function () {
     let childRow = tableContent.children.item(0).children.item(2).innerHTML;
     console.log(childRow)
 
-    // enter cells
-    // let htmlTableCellElement = htmlTableRowElement.insertCell(3);
-    // htmlTableCellElement.innerText = "5"
 
 });
 
@@ -35,7 +32,14 @@ document.getElementById('updateInterestBtn').addEventListener("click",function (
     let childElementCount = tableContent.childElementCount;
     for (let i = 0; i<childElementCount; i++){
         tableContent.children.item(i).children.item(2).innerHTML = interest_value.value;
+        let principalValue =  tableContent.children.item(i).children.item(1).innerHTML;
+        console.log(principalValue);
+        tableContent.children.item(i).children.item(3).innerHTML = annualInterestRate(principalValue,interest_value.value);
     }
 
-
 })
+
+//1 year annual interest calculation
+function annualInterestRate(principalValue:number|string,interestRate:number|string) {
+    return (+principalValue * +interestRate) / 100+"";
+}
