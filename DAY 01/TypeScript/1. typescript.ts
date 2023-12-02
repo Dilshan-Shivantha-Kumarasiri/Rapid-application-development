@@ -282,3 +282,37 @@ console.log(teachers.age);
 console.log(teachers.subject);
 console.log(teachers.college);
 console.log(teachers.classification);
+
+
+// ------------------------------- Abstract --------------------------------------
+
+
+abstract class Animals{
+    abstract move():void;
+
+    eat():void{
+        console.log("eat")
+    }
+}
+
+class Cat extends Animals{
+    move(): void {
+        console.log("using legs")
+    }
+
+}
+
+class Bird extends Animals{
+    move(): void {
+        console.log("using feathers")
+    }
+
+}
+
+let animal1 : Animals = new Bird();
+let animal2 : Animals = new Cat();
+
+animal1.eat();
+animal2.eat()
+animal1.move();
+animal2.move();
