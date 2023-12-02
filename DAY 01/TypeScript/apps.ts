@@ -21,4 +21,16 @@ function removeLastItem<T>(array:T[]) :T[] {
 }
 
 let number = removeLastItem<number>(array1);
-console.log(number);
+console.log(number);let number2 = removeLastItem<number>(array1);
+console.log(number2);
+
+
+class SmartArray<T>{
+    private array : T[];
+
+    constructor(array:T[]) {
+        this.array = array;
+    }
+}
+
+new SmartArray<number>(array1)

@@ -14,3 +14,12 @@ function removeLastItem(array) {
 }
 var number = removeLastItem(array1);
 console.log(number);
+var number2 = removeLastItem(array1);
+console.log(number2);
+var SmartArray = /** @class */ (function () {
+    function SmartArray(array) {
+        this.array = array;
+    }
+    return SmartArray;
+}());
+new SmartArray(array1);
