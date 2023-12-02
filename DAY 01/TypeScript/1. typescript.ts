@@ -174,8 +174,31 @@ console.log(connection);
 let tupel:[string,number,number,string,boolean] =  ['dilshan',25,25,'shivantha',true] // cannot change order and value count
 
 
+// ------------------------------- union --------------------------------------
 
+let array :(number |string|boolean)[] = ["1" , 2 , true]
 
+class Student {
+    id: number;
+    name: string;
+    college: string;
+    faculty: string;
+}
+
+class Teacher {
+    id: number;
+    name: string;
+    subject: string;
+    college: string;
+}
+
+class Soldier {
+    id: number;
+    name: string;
+    post: string;
+}
+
+let people: (Student | Teacher | Soldier)[] = [];
 
 
 

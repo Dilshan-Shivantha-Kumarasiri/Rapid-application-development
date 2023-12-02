@@ -18,7 +18,7 @@ const table_row_element = document.createElement("tr");
 
 document.getElementById("addFixBtn").addEventListener("click",function () {
 
-    let ownerName = input_owner_name.value;
+    let ownerName  = input_owner_name.value;
     let principalAmount = input_fixed_amount.value;
     let interestRate = input_newInterest_rate.value;
     let principal_amount_convert = Number.parseInt(principalAmount);
@@ -46,12 +46,7 @@ document.getElementById("updateInterestBtn").addEventListener("click",function (
         tableRow.cells.item(3).innerText = calculateInterestRatePerYear(Number.parseInt(customerAmount),Number.parseInt(interestRate))+".00";
 
     }
-
-
-
 });
-
-
 
 // add rows to the table
 function addRows(ownerName:string,principalAmount:string,interestRate:string,amount:string){
