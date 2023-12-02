@@ -1,78 +1,74 @@
-class Account {
+let ownerName_inputElement = document.getElementById('ownerName') as HTMLInputElement;
+let fixedAmount_inputElement = document.getElementById('fixedAmount') as HTMLInputElement;
+let newInterestRate_inputElement = document.getElementById('newInterestRate') as HTMLInputElement;
 
-    owner_name;
-    fixed_amount;
-    interest_rate;
-    annual_interest;
+let addFix_btn = document.getElementById('addFixBtn');
+let updateInterestBtn = document.getElementById('updateInterestBtn');
+let table_body = document.getElementById('fixedDepositTableBody');
 
-    constructor(owner_name,fixed_amount,interest_rate,annual_interest) {
-        this.owner_name = owner_name;
-        this.fixed_amount = fixed_amount;
-        this.interest_rate = interest_rate;
-        this.annual_interest = annual_interest;
+let rate = +12.5;
+let accounts:Account_Details [] = [];
+let new_accounts:Account_Details [] = [];
 
-    }
-}
-
-let rate = 12.5;
-let accounts: Account[] = []
-
-let name_input_element =document.getElementById('ownerName') as HTMLInputElement;
-let fixedAmountElement = document.getElementById('fixedAmount') as HTMLInputElement;
-let newInterestRate = document.getElementById('newInterestRate') as HTMLInputElement;
-
-let addFixedBtn = document.getElementById('addFixBtn');
-let table_body = document.getElementById("fixedDepositTableBody");
+addFix_btn.addEventListener('click',() =>{
+    let ownerName =  ownerName_inputElement.value;
+    let fixedAmount = fixedAmount_inputElement.value;
 
 
 
-
-addFixedBtn.addEventListener('click',function () {
-
-    let ownerName = name_input_element.value;
-    let fixedAmount = fixedAmountElement.value;
-    let annualInterestRate = (rate * +fixedAmount)/100
-
-    let account = new Account(ownerName,fixedAmount,rate,annualInterestRate);
+    let annual_interest = (+fixedAmount*12.5)/100;
+    let account =  new Account_Details(ownerName,+fixedAmount,rate,annual_interest);
     accounts.push(account);
+    console.log(accounts);
+    updateTable();
+});
 
-    console.log(accounts)
+updateInterestBtn.addEventListener('click',()=>{
+    let new_rate = newInterestRate_inputElement.value;
+    rate = +new_rate;
+    // for (let i = 0; i < accounts.length; i++) {
+    //    accounts[i].interest_rate=rate;
+    // }
+    accounts.map(r =>{
+        // r.interest_rate=rate;
+        // r.annual_interest=(r.fixed_amount*r.interest_rate)/100;
+        r.update_rate(rate);
+        new_accounts.push(r);
+    });
+    accounts=new_accounts;
     updateTable();
 });
 
 function updateTable() {
+    table_body.innerHTML="";
 
-    table_body.innerHTML = ""
+    accounts.map(r => {
+        let record_element = document.createElement('tr');
+        let record_data = `<td>${r.owner_name}</td>
+                         <td>${r.fixed_amount}</td>
+                         <td>${r.interest_rate}</td>
+                         <td>${r.annual_interest}</td>`;
 
-    accounts.map(r => { // iterating the accounts array
-        let record_element = `<td>${r.owner_name}</td><td>${r.fixed_amount}</td> <td>${r.interest_rate}</td><td>${r.annual_interest}</td>`
-        let table_row = document.createElement("tr");
-        table_row.innerHTML = record_element;
-        table_body.appendChild(table_row);
-
-    })
+        record_element.innerHTML = record_data;
+        table_body.appendChild(record_element);
+    });
 }
 
-//update btn
+class Account_Details {
+    owner_name:string;
+    fixed_amount:number;
+    interest_rate:number;
+    annual_interest:number;
 
-document.getElementById("updateInterestBtn").addEventListener("click",function () {
-
-    let number = 0;
-
-    // accounts.map(r =>{
-    //     table_body.children.item(number).children.item(2).innerHTML = `<td>${r.interest_rate}</td>`
-    //     number+=number+1
-    // })
-
-
-    for (let i = 0; i<accounts.length; i++){
-        // table_body.children.item(i).children.item(i).textContent;
-        let annualInterestRate = (+newInterestRate.value * accounts.at(i).fixed_amount)/100
-        let newAccounts: Account[] = []
-
-
-        
-
-
+    constructor(owner_name:string,fixed_amount:number,interest_rate:number,annual_interest:number) {
+        this.owner_name=owner_name;
+        this.fixed_amount=fixed_amount;
+        this.interest_rate=interest_rate;
+        this.annual_interest=annual_interest;
     }
-});
+
+    update_rate(rate : number):void{
+        this.interest_rate=rate;
+        this.annual_interest=(this.fixed_amount*rate)/100;
+    }
+}

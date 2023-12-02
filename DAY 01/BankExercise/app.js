@@ -1,47 +1,55 @@
-var Account = /** @class */ (function () {
-    function Account(owner_name, fixed_amount, interest_rate, annual_interest) {
-        this.owner_name = owner_name;
-        this.fixed_amount = fixed_amount;
-        this.interest_rate = interest_rate;
-        this.annual_interest = annual_interest;
-    }
-    return Account;
-}());
-var rate = 12.5;
+var ownerName_inputElement = document.getElementById('ownerName');
+var fixedAmount_inputElement = document.getElementById('fixedAmount');
+var newInterestRate_inputElement = document.getElementById('newInterestRate');
+var addFix_btn = document.getElementById('addFixBtn');
+var updateInterestBtn = document.getElementById('updateInterestBtn');
+var table_body = document.getElementById('fixedDepositTableBody');
+var rate = +12.5;
 var accounts = [];
-var name_input_element = document.getElementById('ownerName');
-var fixedAmountElement = document.getElementById('fixedAmount');
-var newInterestRate = document.getElementById('newInterestRate');
-var addFixedBtn = document.getElementById('addFixBtn');
-var table_body = document.getElementById("fixedDepositTableBody");
-addFixedBtn.addEventListener('click', function () {
-    var ownerName = name_input_element.value;
-    var fixedAmount = fixedAmountElement.value;
-    var annualInterestRate = (rate * +fixedAmount) / 100;
-    var account = new Account(ownerName, fixedAmount, rate, annualInterestRate);
+var new_accounts = [];
+addFix_btn.addEventListener('click', function () {
+    var ownerName = ownerName_inputElement.value;
+    var fixedAmount = fixedAmount_inputElement.value;
+    var annual_interest = (+fixedAmount * 12.5) / 100;
+    var account = new Account_Details(ownerName, +fixedAmount, rate, annual_interest);
     accounts.push(account);
     console.log(accounts);
+    updateTable();
+});
+updateInterestBtn.addEventListener('click', function () {
+    var new_rate = newInterestRate_inputElement.value;
+    rate = +new_rate;
+    // for (let i = 0; i < accounts.length; i++) {
+    //    accounts[i].interest_rate=rate;
+    // }
+    accounts.map(function (r) {
+        // r.interest_rate=rate;
+        // r.annual_interest=(r.fixed_amount*r.interest_rate)/100;
+        r.update_rate(rate);
+        new_accounts.push(r);
+    });
+    accounts = new_accounts;
     updateTable();
 });
 function updateTable() {
     table_body.innerHTML = "";
     accounts.map(function (r) {
-        var record_element = "<td>".concat(r.owner_name, "</td><td>").concat(r.fixed_amount, "</td> <td>").concat(r.interest_rate, "</td><td>").concat(r.annual_interest, "</td>");
-        var table_row = document.createElement("tr");
-        table_row.innerHTML = record_element;
-        table_body.appendChild(table_row);
+        var record_element = document.createElement('tr');
+        var record_data = "<td>".concat(r.owner_name, "</td>\n                         <td>").concat(r.fixed_amount, "</td>\n                         <td>").concat(r.interest_rate, "</td>\n                         <td>").concat(r.annual_interest, "</td>");
+        record_element.innerHTML = record_data;
+        table_body.appendChild(record_element);
     });
 }
-//update btn
-document.getElementById("updateInterestBtn").addEventListener("click", function () {
-    var number = 0;
-    // accounts.map(r =>{
-    //     table_body.children.item(number).children.item(2).innerHTML = `<td>${r.interest_rate}</td>`
-    //     number+=number+1
-    // })
-    for (var i = 0; i < accounts.length; i++) {
-        // table_body.children.item(i).children.item(i).textContent;
-        var annualInterestRate = (+newInterestRate.value * accounts.at(i).fixed_amount) / 100;
-        var newAccounts = [];
+var Account_Details = /** @class */ (function () {
+    function Account_Details(owner_name, fixed_amount, interest_rate, annual_interest) {
+        this.owner_name = owner_name;
+        this.fixed_amount = fixed_amount;
+        this.interest_rate = interest_rate;
+        this.annual_interest = annual_interest;
     }
-});
+    Account_Details.prototype.update_rate = function (rate) {
+        this.interest_rate = rate;
+        this.annual_interest = (this.fixed_amount * rate) / 100;
+    };
+    return Account_Details;
+}());
