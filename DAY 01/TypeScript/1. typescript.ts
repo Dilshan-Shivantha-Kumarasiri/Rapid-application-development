@@ -201,4 +201,12 @@ class Soldier {
 let people: (Student | Teacher | Soldier)[] = [];
 
 
+// ------------------------------- enums--------------------------------------
+enum Roles {
+    SUPER_ADMIN,
+    ADMIN,
+    MANAGER,
+    SELLER
+}
+
 
