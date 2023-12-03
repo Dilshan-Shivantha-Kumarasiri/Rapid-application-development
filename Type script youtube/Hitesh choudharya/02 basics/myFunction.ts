@@ -55,5 +55,17 @@ let e :number = functionOne();
 let f :number = functionOne();
 let g :string = functionOne();
 
+function fn(x: string | number) {
+    if (typeof x === "string") {
+        // do something
+    } else if (typeof x === "number") {
+        // do something else
+    } else {
+        x; // has type 'never'! -- this is never observed
+        let noTypeForChecked: never = x; // if we added another union it gives and error
+    }
+
+}
+
 // console.log(c);
 console.log(d);
