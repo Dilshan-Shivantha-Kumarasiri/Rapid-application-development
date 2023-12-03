@@ -7,7 +7,8 @@ console.log(greeting);
 
 
 
-// best practices using the type script
+// ** best practices using the type script **
+
 let useAge :number = 55; // Example 05
 useAge.toFixed();
 
@@ -29,3 +30,16 @@ number = 5;
 
 let boolean :boolean = true;
 boolean.valueOf();
+
+//any
+let user;
+
+function userName() {
+    return "dilshan";
+}
+
+user = userName(); // Example 07
+// any is the  to stop the type checking for the particular value
+// we can assign any value to the user variable the reason is it is by default any
+// "any" is not the type checked. It will cause the type checking (any is the marker of the typescript)
+// the using the "any" we tell compiler to do not checked type of that variable or function
