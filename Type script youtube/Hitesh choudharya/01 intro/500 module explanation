@@ -11,8 +11,11 @@
     * when we using "greeting.toLoweCase()" this is the string method. Only shows the string
       methods (not a methods related to the numbers)
 
+4. There is no equivalent type for int and float the all are the numbers
 
 
+4. Type script is automatically inferred to assign value type whe we declare value and variable in single line
+   For good practices do not need to annotate ":number" in the source code
 
 
 
