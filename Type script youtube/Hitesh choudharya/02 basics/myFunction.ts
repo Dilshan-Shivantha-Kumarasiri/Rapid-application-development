@@ -42,3 +42,18 @@ function errGet(error): void {
 function errHandle(error): never {
     throw new Error("user can not found")
 }
+
+let a :void = null;
+ // let b :never = 5; can not be assigned any value to the "never type" like string or object or numbers
+function functionOne():never{
+    throw  new Error("a")
+}
+
+// let c :void = functionOne(); // undefined
+let d :void = functionOne();
+let e :number = functionOne();
+let f :number = functionOne();
+let g :string = functionOne();
+
+// console.log(c);
+console.log(d);

@@ -1,0 +1,9 @@
+01. never type function can assign to the any variable type like number,
+
+02. To the never type variable we can not assign the any value
+
+03. Never type is used to the function thar are not have not an end point or occur any value
+
+04. Never type function must have a  declare any statement that are not have an endpoint
+    if not retur
+    n the error
