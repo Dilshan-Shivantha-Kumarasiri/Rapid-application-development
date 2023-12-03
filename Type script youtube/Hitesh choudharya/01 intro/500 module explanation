@@ -1,0 +1,34 @@
+1.  the syntax for using variable using tyep script is
+    * let [variableName] [:enterType] = assigned value;
+
+
+2. use 'export {}' to hide the error that is coming for 'can not declare scope variable'
+
+3. example : let greeting : string = "Dilshan"
+    * In the above example you can only assign the string value can not assign
+      any other values except string like number,array,objects
+
+    * when we using "greeting.toLoweCase()" this is the string method. Only shows the string
+      methods
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
