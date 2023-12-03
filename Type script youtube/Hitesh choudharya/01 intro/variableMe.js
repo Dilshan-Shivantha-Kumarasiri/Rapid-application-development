@@ -3,7 +3,7 @@ var greeting = "hello dilshan";
 //greeting.concat() // only suggest string methods not methods related to any other type
 greeting.toLowerCase();
 console.log(greeting);
-// best practices using the type script
+// ** best practices using the type script **
 var useAge = 55; // Example 05
 useAge.toFixed();
 // no need to declare annotate number if assign value in the single line
@@ -19,3 +19,13 @@ number = 5;
 // number = "7"; // can not assign string value
 var boolean = true;
 boolean.valueOf();
+//any
+var user;
+function userName() {
+    return "dilshan";
+}
+user = userName(); // Example 07
+// any is the  to stop the type checking for the particular value
+// we can assign any value to the user variable the reason is it is by default any
+// "any" is not the type checked. It will cause the type checking (any is the marker of the typescript)
+// the using the "any" we tell compiler to do not checked type of that variable or function

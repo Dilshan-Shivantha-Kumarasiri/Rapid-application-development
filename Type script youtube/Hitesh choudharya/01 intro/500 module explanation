@@ -17,7 +17,7 @@
 4. Type script is automatically inferred to assign value type whe we declare value and variable in single line
    For good practices do not need to annotate ":number" in the source code
 
-5. Any is the not the type checked is says compiler to do not check the type of the value (causing checking the type)
+5. Any is the not the type checked is says  to do not check the type of the value (causing checking the type)
    (turn off the type checking for the that particular value)
 
 
