@@ -64,7 +64,6 @@ function fn(x: string | number) {
         x; // has type 'never'! -- this is never observed
         let noTypeForChecked: never = x; // if we added another union it gives and error
     }
-
 }
 
 // console.log(c);
