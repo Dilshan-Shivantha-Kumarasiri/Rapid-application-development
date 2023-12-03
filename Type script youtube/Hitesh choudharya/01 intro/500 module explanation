@@ -9,7 +9,7 @@
       any other values except string like number,array,objects
 
     * when we using "greeting.toLoweCase()" this is the string method. Only shows the string
-      methods
+      methods (not a methods related to the numbers)
 
 
 
