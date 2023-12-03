@@ -34,3 +34,11 @@ let systemUsers = ["dilshan","nilusha","gangamini"];
 systemUsers.map((systemUsers): string =>{
     return systemUsers;
 })
+
+function errGet(error): void {
+    console.log(error);
+}
+
+function errHandle(error): never {
+    throw new Error("user can not found")
+}
