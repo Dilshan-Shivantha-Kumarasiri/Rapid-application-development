@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9644c7e-8a2f-4ed8-ae17-c17f9adf0341" name="Changes" comment="">
+    <list default="true" id="a9644c7e-8a2f-4ed8-ae17-c17f9adf0341" name="Changes" comment="installing react app">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Type script youtube/Hitesh choudharya/02 basics/myFunction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Type script youtube/Hitesh choudharya/02 basics/myFunction.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
@@ -25,11 +31,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Working directory/Rapid-application-development/DAY 02/React Installation/react-app-with-ts/react-app-ts",
+    "last_opened_file_path": "C:/Working directory/Rapid-application-development/React youtube",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,10 +54,46 @@
       <option name="presentableId" value="Default" />
       <updated>1702120644540</updated>
       <workItem from="1702120645972" duration="544000" />
+      <workItem from="1702219571267" duration="860000" />
     </task>
+    <task id="LOCAL-00001" summary="tailwind mini project">
+      <created>1702219656478</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702219656478</updated>
+    </task>
+    <task id="LOCAL-00002" summary="installing react app">
+      <created>1702219705210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702219705210</updated>
+    </task>
+    <task id="LOCAL-00003" summary="installing react app with type script">
+      <created>1702219780353</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702219780353</updated>
+    </task>
+    <task id="LOCAL-00004" summary="installing react app">
+      <created>1702221278885</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702221278886</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="tailwind mini project" />
+    <MESSAGE value="installing react app with type script" />
+    <MESSAGE value="installing react app" />
+    <option name="LAST_COMMIT_MESSAGE" value="installing react app" />
   </component>
 </project>
